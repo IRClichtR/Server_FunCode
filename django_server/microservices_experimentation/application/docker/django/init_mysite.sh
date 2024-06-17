@@ -4,13 +4,18 @@ echo "Hello from Django init script!"
 
 if [ ! -f "manage.py" ]; then
   echo "create mysite initial configuration..."
-  django-admin startproject mysite .
+  django-admin startproject $SERVICE_NAME .
+  sleep 3
 
-
-  # Add databas to setings.py 
-else
-  echo "update infos..."
-  python manage.py migrate
-  python manage.py collectstatic --noinput
-   exec "$@"
+  # Modify settings.py file
+  chmod +x ./modify_settings.sh
+  source modify_settings.sh
 fi
+
+# Link database with service
+echo "update infos..."
+python manage.py migrate
+python manage.py collectstatic --noinput
+
+#start service
+exec "$@"
