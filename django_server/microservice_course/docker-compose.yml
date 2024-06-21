@@ -15,6 +15,6 @@ services:
     env_file:
       - .env
     volumes:
-      - .dbdata:/var/lib/mysql
+      - .dbdata:/lib/mysql
     ports:
       - "3305:3306"
