@@ -1,25 +1,25 @@
 services:
-  django:
-    container_name: django
+  user_management:
+    container_name: user_management
     build:
-      context: ./application/docker/django/
+      context: ./application/docker/user_management/
     depends_on:
       - database
     restart: unless-stopped
     env_file:
-      - .env
+      - .user_management.env
     ports:
-      - "8000:8000"
+      - "8001:8000"
     volumes:
-      - ./application/mysite:/app/mysite
+      - ./application/service:/app/
   
-  database:
+  user_man_database:
     container_name: postgres
     image: postgres
     ports:
       - "5432:5432"
     env_file:
-      - .env
+      - .user_management.env
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped

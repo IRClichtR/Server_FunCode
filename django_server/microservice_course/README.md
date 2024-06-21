@@ -1,0 +1,1 @@
+---> plusieurs microservices qui ont chacun une database et communiquent via messages. 
