@@ -1,24 +1,22 @@
 services:
-  backend:
-    container_name: backend
+  main_backend:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: main_backend
     ports: 
-      - "8000:8000"
-    env_file:
-      - .env
+      - "8001:5001"
     volumes:
-      - .:/app 
+      - .:/app
     depends_on:
       - db
   db:
     image: mysql:5.7.22
-    container_name: backend_db
+    container_name: main_db
     restart: always
     env_file:
       - .env
     volumes:
       - .dbdata:/lib/mysql
     ports:
-      - "3305:3306"
+      - "3304:3306"

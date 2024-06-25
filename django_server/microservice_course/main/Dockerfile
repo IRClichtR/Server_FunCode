@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 COPY . /app
 RUN ls -la /app
 
-CMD python manage.py runserver 0.0.0.0:8000
+CMD python3 main.py
