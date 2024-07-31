@@ -1,0 +1,10 @@
+Django
+djangorestframework
+django-bootstrap-v5
+python-dotenv
+psycopg2-binary
+celery
+daphne
+channels
+django-redis
+celery[redis]

@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)  # Création de l'application Flask
-app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:root@db/main'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:root@main_db/main'
 CORS(app)
 
 db = SQLAlchemy(app)
