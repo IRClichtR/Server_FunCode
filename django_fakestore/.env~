@@ -1,6 +1,0 @@
-#Postgres
-POSTGRES_USER=fakestore
-POSTGRES_PASSWORD=regvdazVBEDJzefbve93
-POSTGRES_DB=fakestore_db
-POSTGRES_PORT=5432
-POSTGRES_HOST=fakestore_db

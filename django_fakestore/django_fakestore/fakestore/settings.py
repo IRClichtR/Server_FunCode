@@ -29,8 +29,11 @@ SECRET_KEY = 'django-insecure-sl!*b6%+g3j_xhto@!!mpr4kd%7uo9=fk4j2$4l1p&x2+0pd&f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
+# HTTPS configuration 
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True
 
 # Application definition
 
@@ -59,8 +62,8 @@ ROOT_URLCONF = 'fakestore.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        
+        
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
