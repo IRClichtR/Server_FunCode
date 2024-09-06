@@ -1,0 +1,6 @@
+# ignore docker related files
+Dockerfile
+
+#ignore .env
+*.env
+
