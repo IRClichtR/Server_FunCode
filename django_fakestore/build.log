@@ -1,0 +1,386 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [modsec_apache internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.61kB 0.0s done
+#1 DONE 0.1s
+
+#2 [modsec_apache internal] load metadata for docker.io/library/httpd:2.4
+#2 DONE 1.0s
+
+#3 [modsec_apache internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [modsec_apache  1/11] FROM docker.io/library/httpd:2.4@sha256:ae1124b8d23ee3fc35d49da35d5c748a2fce318d1f55ce59ccab889d612f8be8
+#4 resolve docker.io/library/httpd:2.4@sha256:ae1124b8d23ee3fc35d49da35d5c748a2fce318d1f55ce59ccab889d612f8be8 0.0s done
+#4 ...
+
+#5 [modsec_apache internal] load build context
+#5 transferring context: 66.06kB 0.0s done
+#5 DONE 0.1s
+
+#4 [modsec_apache  1/11] FROM docker.io/library/httpd:2.4@sha256:ae1124b8d23ee3fc35d49da35d5c748a2fce318d1f55ce59ccab889d612f8be8
+#4 sha256:ae1124b8d23ee3fc35d49da35d5c748a2fce318d1f55ce59ccab889d612f8be8 10.16kB / 10.16kB done
+#4 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0B / 32B 0.1s
+#4 sha256:22871f73faeda254312b112bc7957809779f62f9d836c7fca4384d072add2ef9 0B / 4.20MB 0.1s
+#4 sha256:d5e27d8afcb0a2dbe26a5134cfa2eb0544493fbe1d7501e0fc3d0746c8293cf1 2.10kB / 2.10kB done
+#4 sha256:9cb0a231560203a9b46325ef6dfe0d21d524813acb74447fd276b9813a9fdd44 8.02kB / 8.02kB done
+#4 sha256:62dd86107c6509c0cd806341bf885ef9f9bdd9e3e4cd3acb60d21c81600b0821 0B / 144B 0.1s
+#4 extracting sha256:62dd86107c6509c0cd806341bf885ef9f9bdd9e3e4cd3acb60d21c81600b0821 done
+#4 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B 0.2s done
+#4 sha256:62dd86107c6509c0cd806341bf885ef9f9bdd9e3e4cd3acb60d21c81600b0821 144B / 144B 0.1s done
+#4 sha256:ca061a523d1fbf3e4fc09e62be0071f6b9ec35ffd040f4f171aed7cd82ee4f20 0B / 26.04MB 0.3s
+#4 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 done
+#4 sha256:509789394c2a1986127ea7ef8f677c619dae6aa7157672578e1ba02ef602a485 0B / 290B 0.3s
+#4 sha256:22871f73faeda254312b112bc7957809779f62f9d836c7fca4384d072add2ef9 3.15MB / 4.20MB 0.4s
+#4 sha256:22871f73faeda254312b112bc7957809779f62f9d836c7fca4384d072add2ef9 4.20MB / 4.20MB 0.4s done
+#4 sha256:ca061a523d1fbf3e4fc09e62be0071f6b9ec35ffd040f4f171aed7cd82ee4f20 4.19MB / 26.04MB 0.5s
+#4 sha256:509789394c2a1986127ea7ef8f677c619dae6aa7157672578e1ba02ef602a485 290B / 290B 0.5s done
+#4 extracting sha256:22871f73faeda254312b112bc7957809779f62f9d836c7fca4384d072add2ef9 0.1s
+#4 sha256:ca061a523d1fbf3e4fc09e62be0071f6b9ec35ffd040f4f171aed7cd82ee4f20 17.83MB / 26.04MB 0.7s
+#4 sha256:ca061a523d1fbf3e4fc09e62be0071f6b9ec35ffd040f4f171aed7cd82ee4f20 24.12MB / 26.04MB 0.8s
+#4 sha256:ca061a523d1fbf3e4fc09e62be0071f6b9ec35ffd040f4f171aed7cd82ee4f20 26.04MB / 26.04MB 0.9s
+#4 sha256:ca061a523d1fbf3e4fc09e62be0071f6b9ec35ffd040f4f171aed7cd82ee4f20 26.04MB / 26.04MB 0.9s done
+#4 extracting sha256:22871f73faeda254312b112bc7957809779f62f9d836c7fca4384d072add2ef9 0.9s done
+#4 extracting sha256:ca061a523d1fbf3e4fc09e62be0071f6b9ec35ffd040f4f171aed7cd82ee4f20
+#4 extracting sha256:ca061a523d1fbf3e4fc09e62be0071f6b9ec35ffd040f4f171aed7cd82ee4f20 1.4s done
+#4 extracting sha256:509789394c2a1986127ea7ef8f677c619dae6aa7157672578e1ba02ef602a485 done
+#4 DONE 3.1s
+
+#6 [modsec_apache  2/11] RUN apt-get update && apt-get install -y     apache2     apache2-utils     libapache2-mod-security2     modsecurity-crs     curl     vim     openssl     && apt-get clean
+#6 0.317 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#6 0.351 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#6 0.351 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#6 0.483 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8787 kB]
+#6 0.682 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [2468 B]
+#6 0.804 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [181 kB]
+#6 2.225 Fetched 9225 kB in 2s (4769 kB/s)
+#6 2.225 Reading package lists...
+#6 3.072 Reading package lists...
+#6 3.900 Building dependency tree...
+#6 4.113 Reading state information...
+#6 4.393 openssl is already the newest version (3.0.14-1~deb12u2).
+#6 4.393 openssl set to manually installed.
+#6 4.393 The following additional packages will be installed:
+#6 4.394   apache2-bin apache2-data libaprutil1-dbd-sqlite3 libcurl3-gnutls
+#6 4.394   libgdbm-compat4 libgpm2 liblua5.1-0 liblua5.3-0 libncursesw6 libperl5.36
+#6 4.399   libproc2-0 libsodium23 libsqlite3-0 libyajl2 media-types netbase perl
+#6 4.399   perl-modules-5.36 procps psmisc ssl-cert vim-common vim-runtime xxd
+#6 4.403 Suggested packages:
+#6 4.403   apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser gpm
+#6 4.403   sensible-utils lua geoip-database-contrib ruby python perl-doc
+#6 4.403   libterm-readline-gnu-perl | libterm-readline-perl-perl make
+#6 4.403   libtap-harness-archive-perl ctags vim-doc vim-scripts
+#6 4.682 The following NEW packages will be installed:
+#6 4.682   apache2 apache2-bin apache2-data apache2-utils curl libapache2-mod-security2
+#6 4.683   libaprutil1-dbd-sqlite3 libcurl3-gnutls libgdbm-compat4 libgpm2 liblua5.1-0
+#6 4.685   liblua5.3-0 libncursesw6 libperl5.36 libproc2-0 libsodium23 libsqlite3-0
+#6 4.685   libyajl2 media-types modsecurity-crs netbase perl perl-modules-5.36 procps
+#6 4.686   psmisc ssl-cert vim vim-common vim-runtime xxd
+#6 4.757 0 upgraded, 30 newly installed, 0 to remove and 0 not upgraded.
+#6 4.757 Need to get 21.7 MB of archives.
+#6 4.757 After this operation, 108 MB of additional disk space will be used.
+#6 4.757 Get:1 http://deb.debian.org/debian bookworm/main amd64 perl-modules-5.36 all 5.36.0-7+deb12u1 [2815 kB]
+#6 4.829 Get:2 http://deb.debian.org/debian bookworm/main amd64 libgdbm-compat4 amd64 1.23-3 [48.2 kB]
+#6 4.830 Get:3 http://deb.debian.org/debian bookworm/main amd64 libperl5.36 amd64 5.36.0-7+deb12u1 [4218 kB]
+#6 4.933 Get:4 http://deb.debian.org/debian bookworm/main amd64 perl amd64 5.36.0-7+deb12u1 [239 kB]
+#6 4.936 Get:5 http://deb.debian.org/debian bookworm/main amd64 libsqlite3-0 amd64 3.40.1-2 [837 kB]
+#6 4.946 Get:6 http://deb.debian.org/debian bookworm/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.3-1 [13.6 kB]
+#6 4.946 Get:7 http://deb.debian.org/debian bookworm/main amd64 liblua5.3-0 amd64 5.3.6-2 [123 kB]
+#6 4.949 Get:8 http://deb.debian.org/debian bookworm/main amd64 apache2-bin amd64 2.4.62-1~deb12u1 [1385 kB]
+#6 4.971 Get:9 http://deb.debian.org/debian bookworm/main amd64 apache2-data all 2.4.62-1~deb12u1 [160 kB]
+#6 4.973 Get:10 http://deb.debian.org/debian bookworm/main amd64 apache2-utils amd64 2.4.62-1~deb12u1 [210 kB]
+#6 4.979 Get:11 http://deb.debian.org/debian bookworm/main amd64 media-types all 10.0.0 [26.1 kB]
+#6 4.979 Get:12 http://deb.debian.org/debian bookworm/main amd64 libncursesw6 amd64 6.4-4 [134 kB]
+#6 4.986 Get:13 http://deb.debian.org/debian bookworm/main amd64 libproc2-0 amd64 2:4.0.2-3 [62.8 kB]
+#6 4.986 Get:14 http://deb.debian.org/debian bookworm/main amd64 procps amd64 2:4.0.2-3 [709 kB]
+#6 4.996 Get:15 http://deb.debian.org/debian bookworm/main amd64 apache2 amd64 2.4.62-1~deb12u1 [223 kB]
+#6 5.001 Get:16 http://deb.debian.org/debian bookworm/main amd64 netbase all 6.4 [12.8 kB]
+#6 5.003 Get:17 http://deb.debian.org/debian bookworm/main amd64 vim-common all 2:9.0.1378-2 [124 kB]
+#6 5.005 Get:18 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u7 [315 kB]
+#6 5.012 Get:19 http://deb.debian.org/debian bookworm/main amd64 libcurl3-gnutls amd64 7.88.1-10+deb12u7 [385 kB]
+#6 5.018 Get:20 http://deb.debian.org/debian bookworm/main amd64 liblua5.1-0 amd64 5.1.5-9 [111 kB]
+#6 5.024 Get:21 http://deb.debian.org/debian bookworm/main amd64 libyajl2 amd64 2.1.0-3+deb12u2 [23.0 kB]
+#6 5.026 Get:22 http://deb.debian.org/debian bookworm/main amd64 libapache2-mod-security2 amd64 2.9.7-1+b1 [259 kB]
+#6 5.032 Get:23 http://deb.debian.org/debian bookworm/main amd64 libgpm2 amd64 1.20.7-10+b1 [14.2 kB]
+#6 5.032 Get:24 http://deb.debian.org/debian bookworm/main amd64 libsodium23 amd64 1.0.18-1 [161 kB]
+#6 5.038 Get:25 http://deb.debian.org/debian bookworm/main amd64 modsecurity-crs all 3.3.4-1 [163 kB]
+#6 5.051 Get:26 http://deb.debian.org/debian bookworm/main amd64 psmisc amd64 23.6-1 [259 kB]
+#6 5.051 Get:27 http://deb.debian.org/debian bookworm/main amd64 ssl-cert all 1.1.2 [21.1 kB]
+#6 5.051 Get:28 http://deb.debian.org/debian bookworm/main amd64 vim-runtime all 2:9.0.1378-2 [7025 kB]
+#6 5.156 Get:29 http://deb.debian.org/debian bookworm/main amd64 vim amd64 2:9.0.1378-2 [1567 kB]
+#6 5.191 Get:30 http://deb.debian.org/debian bookworm/main amd64 xxd amd64 2:9.0.1378-2 [83.7 kB]
+#6 5.432 debconf: delaying package configuration, since apt-utils is not installed
+#6 5.494 Fetched 21.7 MB in 0s (44.8 MB/s)
+#6 5.527 Selecting previously unselected package perl-modules-5.36.
+#6 5.527 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6791 files and directories currently installed.)
+#6 5.552 Preparing to unpack .../00-perl-modules-5.36_5.36.0-7+deb12u1_all.deb ...
+#6 5.576 Unpacking perl-modules-5.36 (5.36.0-7+deb12u1) ...
+#6 6.283 Selecting previously unselected package libgdbm-compat4:amd64.
+#6 6.286 Preparing to unpack .../01-libgdbm-compat4_1.23-3_amd64.deb ...
+#6 6.298 Unpacking libgdbm-compat4:amd64 (1.23-3) ...
+#6 6.358 Selecting previously unselected package libperl5.36:amd64.
+#6 6.360 Preparing to unpack .../02-libperl5.36_5.36.0-7+deb12u1_amd64.deb ...
+#6 6.365 Unpacking libperl5.36:amd64 (5.36.0-7+deb12u1) ...
+#6 6.971 Selecting previously unselected package perl.
+#6 6.974 Preparing to unpack .../03-perl_5.36.0-7+deb12u1_amd64.deb ...
+#6 6.989 Unpacking perl (5.36.0-7+deb12u1) ...
+#6 7.072 Selecting previously unselected package libsqlite3-0:amd64.
+#6 7.074 Preparing to unpack .../04-libsqlite3-0_3.40.1-2_amd64.deb ...
+#6 7.082 Unpacking libsqlite3-0:amd64 (3.40.1-2) ...
+#6 7.203 Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+#6 7.206 Preparing to unpack .../05-libaprutil1-dbd-sqlite3_1.6.3-1_amd64.deb ...
+#6 7.212 Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.3-1) ...
+#6 7.265 Selecting previously unselected package liblua5.3-0:amd64.
+#6 7.268 Preparing to unpack .../06-liblua5.3-0_5.3.6-2_amd64.deb ...
+#6 7.274 Unpacking liblua5.3-0:amd64 (5.3.6-2) ...
+#6 7.328 Selecting previously unselected package apache2-bin.
+#6 7.331 Preparing to unpack .../07-apache2-bin_2.4.62-1~deb12u1_amd64.deb ...
+#6 7.336 Unpacking apache2-bin (2.4.62-1~deb12u1) ...
+#6 7.552 Selecting previously unselected package apache2-data.
+#6 7.556 Preparing to unpack .../08-apache2-data_2.4.62-1~deb12u1_all.deb ...
+#6 7.562 Unpacking apache2-data (2.4.62-1~deb12u1) ...
+#6 7.667 Selecting previously unselected package apache2-utils.
+#6 7.669 Preparing to unpack .../09-apache2-utils_2.4.62-1~deb12u1_amd64.deb ...
+#6 7.675 Unpacking apache2-utils (2.4.62-1~deb12u1) ...
+#6 7.742 Selecting previously unselected package media-types.
+#6 7.747 Preparing to unpack .../10-media-types_10.0.0_all.deb ...
+#6 7.753 Unpacking media-types (10.0.0) ...
+#6 7.808 Selecting previously unselected package libncursesw6:amd64.
+#6 7.812 Preparing to unpack .../11-libncursesw6_6.4-4_amd64.deb ...
+#6 7.817 Unpacking libncursesw6:amd64 (6.4-4) ...
+#6 7.879 Selecting previously unselected package libproc2-0:amd64.
+#6 7.884 Preparing to unpack .../12-libproc2-0_2%3a4.0.2-3_amd64.deb ...
+#6 7.891 Unpacking libproc2-0:amd64 (2:4.0.2-3) ...
+#6 7.959 Selecting previously unselected package procps.
+#6 7.962 Preparing to unpack .../13-procps_2%3a4.0.2-3_amd64.deb ...
+#6 7.988 Unpacking procps (2:4.0.2-3) ...
+#6 8.134 Selecting previously unselected package apache2.
+#6 8.137 Preparing to unpack .../14-apache2_2.4.62-1~deb12u1_amd64.deb ...
+#6 8.163 Unpacking apache2 (2.4.62-1~deb12u1) ...
+#6 8.247 Selecting previously unselected package netbase.
+#6 8.251 Preparing to unpack .../15-netbase_6.4_all.deb ...
+#6 8.256 Unpacking netbase (6.4) ...
+#6 8.315 Selecting previously unselected package vim-common.
+#6 8.318 Preparing to unpack .../16-vim-common_2%3a9.0.1378-2_all.deb ...
+#6 8.323 Unpacking vim-common (2:9.0.1378-2) ...
+#6 8.377 Selecting previously unselected package curl.
+#6 8.380 Preparing to unpack .../17-curl_7.88.1-10+deb12u7_amd64.deb ...
+#6 8.385 Unpacking curl (7.88.1-10+deb12u7) ...
+#6 8.466 Selecting previously unselected package libcurl3-gnutls:amd64.
+#6 8.470 Preparing to unpack .../18-libcurl3-gnutls_7.88.1-10+deb12u7_amd64.deb ...
+#6 8.475 Unpacking libcurl3-gnutls:amd64 (7.88.1-10+deb12u7) ...
+#6 8.555 Selecting previously unselected package liblua5.1-0:amd64.
+#6 8.559 Preparing to unpack .../19-liblua5.1-0_5.1.5-9_amd64.deb ...
+#6 8.564 Unpacking liblua5.1-0:amd64 (5.1.5-9) ...
+#6 8.629 Selecting previously unselected package libyajl2:amd64.
+#6 8.632 Preparing to unpack .../20-libyajl2_2.1.0-3+deb12u2_amd64.deb ...
+#6 8.638 Unpacking libyajl2:amd64 (2.1.0-3+deb12u2) ...
+#6 8.688 Selecting previously unselected package libapache2-mod-security2.
+#6 8.696 Preparing to unpack .../21-libapache2-mod-security2_2.9.7-1+b1_amd64.deb ...
+#6 8.710 Unpacking libapache2-mod-security2 (2.9.7-1+b1) ...
+#6 8.800 Selecting previously unselected package libgpm2:amd64.
+#6 8.803 Preparing to unpack .../22-libgpm2_1.20.7-10+b1_amd64.deb ...
+#6 8.808 Unpacking libgpm2:amd64 (1.20.7-10+b1) ...
+#6 8.860 Selecting previously unselected package libsodium23:amd64.
+#6 8.863 Preparing to unpack .../23-libsodium23_1.0.18-1_amd64.deb ...
+#6 8.868 Unpacking libsodium23:amd64 (1.0.18-1) ...
+#6 8.930 Selecting previously unselected package modsecurity-crs.
+#6 8.933 Preparing to unpack .../24-modsecurity-crs_3.3.4-1_all.deb ...
+#6 8.939 Unpacking modsecurity-crs (3.3.4-1) ...
+#6 9.028 Selecting previously unselected package psmisc.
+#6 9.031 Preparing to unpack .../25-psmisc_23.6-1_amd64.deb ...
+#6 9.036 Unpacking psmisc (23.6-1) ...
+#6 9.128 Selecting previously unselected package ssl-cert.
+#6 9.131 Preparing to unpack .../26-ssl-cert_1.1.2_all.deb ...
+#6 9.137 Unpacking ssl-cert (1.1.2) ...
+#6 9.209 Selecting previously unselected package vim-runtime.
+#6 9.211 Preparing to unpack .../27-vim-runtime_2%3a9.0.1378-2_all.deb ...
+#6 9.224 Adding 'diversion of /usr/share/vim/vim90/doc/help.txt to /usr/share/vim/vim90/doc/help.txt.vim-tiny by vim-runtime'
+#6 9.237 Adding 'diversion of /usr/share/vim/vim90/doc/tags to /usr/share/vim/vim90/doc/tags.vim-tiny by vim-runtime'
+#6 9.242 Unpacking vim-runtime (2:9.0.1378-2) ...
+#6 10.27 Selecting previously unselected package vim.
+#6 10.27 Preparing to unpack .../28-vim_2%3a9.0.1378-2_amd64.deb ...
+#6 10.28 Unpacking vim (2:9.0.1378-2) ...
+#6 10.50 Selecting previously unselected package xxd.
+#6 10.50 Preparing to unpack .../29-xxd_2%3a9.0.1378-2_amd64.deb ...
+#6 10.51 Unpacking xxd (2:9.0.1378-2) ...
+#6 10.58 Setting up media-types (10.0.0) ...
+#6 10.60 Setting up libsodium23:amd64 (1.0.18-1) ...
+#6 10.62 Setting up libgpm2:amd64 (1.20.7-10+b1) ...
+#6 10.64 Setting up psmisc (23.6-1) ...
+#6 10.66 Setting up libsqlite3-0:amd64 (3.40.1-2) ...
+#6 10.67 Setting up libyajl2:amd64 (2.1.0-3+deb12u2) ...
+#6 10.69 Setting up libcurl3-gnutls:amd64 (7.88.1-10+deb12u7) ...
+#6 10.70 Setting up modsecurity-crs (3.3.4-1) ...
+#6 10.73 Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.3-1) ...
+#6 10.74 Setting up xxd (2:9.0.1378-2) ...
+#6 10.76 Setting up perl-modules-5.36 (5.36.0-7+deb12u1) ...
+#6 10.77 Setting up vim-common (2:9.0.1378-2) ...
+#6 10.80 Setting up ssl-cert (1.1.2) ...
+#6 10.91 debconf: unable to initialize frontend: Dialog
+#6 10.91 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 10.91 debconf: falling back to frontend: Readline
+#6 10.92 debconf: unable to initialize frontend: Readline
+#6 10.92 debconf: (This frontend requires a controlling tty.)
+#6 10.92 debconf: falling back to frontend: Teletype
+#6 11.46 Setting up libproc2-0:amd64 (2:4.0.2-3) ...
+#6 11.49 Setting up libgdbm-compat4:amd64 (1.23-3) ...
+#6 11.50 Setting up libncursesw6:amd64 (6.4-4) ...
+#6 11.52 Setting up liblua5.3-0:amd64 (5.3.6-2) ...
+#6 11.53 Setting up procps (2:4.0.2-3) ...
+#6 11.60 Setting up liblua5.1-0:amd64 (5.1.5-9) ...
+#6 11.61 Setting up netbase (6.4) ...
+#6 11.65 Setting up apache2-data (2.4.62-1~deb12u1) ...
+#6 11.67 Setting up curl (7.88.1-10+deb12u7) ...
+#6 11.68 Setting up vim-runtime (2:9.0.1378-2) ...
+#6 11.90 Setting up libperl5.36:amd64 (5.36.0-7+deb12u1) ...
+#6 11.92 Setting up apache2-utils (2.4.62-1~deb12u1) ...
+#6 11.93 Setting up vim (2:9.0.1378-2) ...
+#6 11.96 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+#6 11.96 update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group editor) doesn't exist
+#6 11.96 update-alternatives: warning: skip creation of /usr/share/man/da/man1/editor.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group editor) doesn't exist
+#6 11.96 update-alternatives: warning: skip creation of /usr/share/man/de/man1/editor.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group editor) doesn't exist
+#6 11.96 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/editor.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group editor) doesn't exist
+#6 11.96 update-alternatives: warning: skip creation of /usr/share/man/it/man1/editor.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group editor) doesn't exist
+#6 11.96 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/editor.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group editor) doesn't exist
+#6 11.96 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/editor.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group editor) doesn't exist
+#6 11.96 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/editor.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group editor) doesn't exist
+#6 11.96 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/editor.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group editor) doesn't exist
+#6 11.97 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+#6 11.97 update-alternatives: warning: skip creation of /usr/share/man/man1/ex.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group ex) doesn't exist
+#6 11.97 update-alternatives: warning: skip creation of /usr/share/man/da/man1/ex.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group ex) doesn't exist
+#6 11.97 update-alternatives: warning: skip creation of /usr/share/man/de/man1/ex.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group ex) doesn't exist
+#6 11.97 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/ex.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group ex) doesn't exist
+#6 11.97 update-alternatives: warning: skip creation of /usr/share/man/it/man1/ex.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group ex) doesn't exist
+#6 11.97 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/ex.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group ex) doesn't exist
+#6 11.97 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/ex.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group ex) doesn't exist
+#6 11.97 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/ex.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group ex) doesn't exist
+#6 11.97 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/ex.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group ex) doesn't exist
+#6 11.97 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+#6 11.98 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+#6 11.98 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+#6 11.98 update-alternatives: warning: skip creation of /usr/share/man/man1/vi.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group vi) doesn't exist
+#6 11.98 update-alternatives: warning: skip creation of /usr/share/man/da/man1/vi.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group vi) doesn't exist
+#6 11.98 update-alternatives: warning: skip creation of /usr/share/man/de/man1/vi.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group vi) doesn't exist
+#6 11.98 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/vi.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group vi) doesn't exist
+#6 11.98 update-alternatives: warning: skip creation of /usr/share/man/it/man1/vi.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group vi) doesn't exist
+#6 11.98 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/vi.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group vi) doesn't exist
+#6 11.98 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/vi.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group vi) doesn't exist
+#6 11.98 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/vi.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group vi) doesn't exist
+#6 11.98 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/vi.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group vi) doesn't exist
+#6 12.00 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+#6 12.00 update-alternatives: warning: skip creation of /usr/share/man/man1/view.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group view) doesn't exist
+#6 12.00 update-alternatives: warning: skip creation of /usr/share/man/da/man1/view.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group view) doesn't exist
+#6 12.00 update-alternatives: warning: skip creation of /usr/share/man/de/man1/view.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group view) doesn't exist
+#6 12.00 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/view.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group view) doesn't exist
+#6 12.00 update-alternatives: warning: skip creation of /usr/share/man/it/man1/view.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group view) doesn't exist
+#6 12.00 update-alternatives: warning: skip creation of /usr/share/man/ja/man1/view.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group view) doesn't exist
+#6 12.00 update-alternatives: warning: skip creation of /usr/share/man/pl/man1/view.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group view) doesn't exist
+#6 12.00 update-alternatives: warning: skip creation of /usr/share/man/ru/man1/view.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group view) doesn't exist
+#6 12.00 update-alternatives: warning: skip creation of /usr/share/man/tr/man1/view.1.gz because associated file /usr/share/man/tr/man1/vim.1.gz (of link group view) doesn't exist
+#6 12.01 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+#6 12.02 update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+#6 12.03 Setting up perl (5.36.0-7+deb12u1) ...
+#6 12.07 Setting up apache2-bin (2.4.62-1~deb12u1) ...
+#6 12.08 Setting up apache2 (2.4.62-1~deb12u1) ...
+#6 13.06 Enabling module mpm_event.
+#6 13.13 Enabling module authz_core.
+#6 13.14 Enabling module authz_host.
+#6 13.19 Enabling module authn_core.
+#6 13.21 Enabling module auth_basic.
+#6 13.27 Enabling module access_compat.
+#6 13.32 Enabling module authn_file.
+#6 13.38 Enabling module authz_user.
+#6 13.43 Enabling module alias.
+#6 13.48 Enabling module dir.
+#6 13.53 Enabling module autoindex.
+#6 13.59 Enabling module env.
+#6 13.64 Enabling module mime.
+#6 13.70 Enabling module negotiation.
+#6 13.75 Enabling module setenvif.
+#6 13.80 Enabling module filter.
+#6 13.85 Enabling module deflate.
+#6 13.91 Enabling module status.
+#6 13.96 Enabling module reqtimeout.
+#6 14.01 Enabling conf charset.
+#6 14.06 Enabling conf localized-error-pages.
+#6 14.12 Enabling conf other-vhosts-access-log.
+#6 14.17 Enabling conf security.
+#6 14.23 Enabling conf serve-cgi-bin.
+#6 14.28 Enabling site 000-default.
+#6 14.32 invoke-rc.d: could not determine current runlevel
+#6 14.33 invoke-rc.d: policy-rc.d denied execution of start.
+#6 14.81 Setting up libapache2-mod-security2 (2.9.7-1+b1) ...
+#6 14.98 apache2_invoke: Enable module security2
+#6 15.12 invoke-rc.d: could not determine current runlevel
+#6 15.13 invoke-rc.d: policy-rc.d denied execution of restart.
+#6 15.14 Processing triggers for libc-bin (2.36-9+deb12u8) ...
+#6 DONE 15.6s
+
+#7 [modsec_apache  3/11] RUN a2enmod proxy     && a2enmod proxy_http     && a2enmod ssl     && a2enmod headers     && a2enmod negotiation
+#7 0.273 Enabling module proxy.
+#7 0.285 To activate the new configuration, you need to run:
+#7 0.285   service apache2 restart
+#7 0.332 Considering dependency proxy for proxy_http:
+#7 0.332 Module proxy already enabled
+#7 0.332 Enabling module proxy_http.
+#7 0.341 To activate the new configuration, you need to run:
+#7 0.341   service apache2 restart
+#7 0.385 Considering dependency setenvif for ssl:
+#7 0.385 Module setenvif already enabled
+#7 0.385 Considering dependency mime for ssl:
+#7 0.385 Module mime already enabled
+#7 0.385 Considering dependency socache_shmcb for ssl:
+#7 0.385 Enabling module socache_shmcb.
+#7 0.396 Enabling module ssl.
+#7 0.396 See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
+#7 0.406 To activate the new configuration, you need to run:
+#7 0.406   service apache2 restart
+#7 0.451 Enabling module headers.
+#7 0.460 To activate the new configuration, you need to run:
+#7 0.460   service apache2 restart
+#7 0.501 Module negotiation already enabled
+#7 DONE 0.5s
+
+#8 [modsec_apache  4/11] RUN mkdir -p /usr/local/apache2/ssl
+#8 DONE 0.4s
+
+#9 [modsec_apache  5/11] RUN openssl req -x509 -nodes -out /usr/local/apache2/ssl/fakestore.crt                             -keyout /usr/local/apache2/ssl/fakestore.key                             -subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=fakestore.fr/UID=fakestore"
+#9 0.394 .+...........+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.......+...+..+...+....+.....+.............+..+....+.........+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.....+.............+.....+.+..+....+.....+.............+.....+...+....+...+............+........+...+...+.........+.......+...+...+...+..+..........+...+..+............+......+.+........+......+.........+.+..........................+...+............+....+.........+..+.+.....+.......+.....+...+...+.+....................+.........+......+.+...+..+............................+............+...+......+.....+...+......+.........+.+.....+....+.....+......+.+.....+.+...............+.........+.....+.+...+.....+....+......+.........+..+....+..+.......+.....+..........+.................+...+...+...............+...+....+...........................+...+.....+..........+...+.........+.....+.+...+...........+.+.....+....+........+......+....+..+...............+.+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#9 1.014 ......+............+...+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*....+...+.......+..+.+...............+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*...+.........+.+...+...+..+...+...+....+...+...+..............+.+..+....+.....+...+............+.+............+.....+.......+........+...+....+...........+...................+......+...+..+.......+..+......+...+....+......+.........+..+.............+..+...+.+..+....+...........+.......+.....+......+................+.....+.+.....+...+....+..+.........+............+...............+.......+........+....+.....+.+..+......+.......+.........+...........+.........+......+.......+......+..+....+........+.+............+.....+..........+..+............................+............+...+...+..+...+......+.+..+.+...........+.............+...+..+......+......+...+............+.+...+.....+.........+...+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#9 1.597 -----
+#9 DONE 1.6s
+
+#10 [modsec_apache  6/11] RUN ls -la /usr/local/apache2/ssl
+#10 0.374 total 20
+#10 0.374 drwxr-xr-x 1 root     root     4096 Sep 17 11:34 .
+#10 0.374 drwxr-xr-x 1 www-data www-data 4096 Sep 17 11:34 ..
+#10 0.374 -rw-r--r-- 1 root     root     1383 Sep 17 11:34 fakestore.crt
+#10 0.374 -rw------- 1 root     root     1704 Sep 17 11:34 fakestore.key
+#10 DONE 0.4s
+
+#11 [modsec_apache  7/11] COPY ./conf/modsecurity.conf /etc/modsecurity/modsecurity.conf
+#11 DONE 0.0s
+
+#12 [modsec_apache  8/11] COPY ./conf/crs-setup.conf /etc/modsecurity/crs-setup.conf
+#12 DONE 0.0s
+
+#13 [modsec_apache  9/11] COPY ./conf/fakestore.conf /usr/local/apache2/conf/httpd.conf
+#13 DONE 0.0s
+
+#14 [modsec_apache 10/11] COPY ./conf/httpd-ssl.conf /usr/local/apache2/conf/extra/httpd-ssl.conf
+#14 DONE 0.0s
+
+#15 [modsec_apache 11/11] RUN sed -i 's/SecRuleEngine DetectionOnly/SecRuleEngine On/' /etc/modsecurity/modsecurity.conf &&     a2enmod security2
+#15 0.255 Considering dependency unique_id for security2:
+#15 0.255 Module unique_id already enabled
+#15 0.255 Module security2 already enabled
+#15 DONE 0.3s
+
+#16 [modsec_apache] exporting to image
+#16 exporting layers
+#16 exporting layers 1.1s done
+#16 writing image sha256:7e84ce78f7e93de56ed52d20f7b838f0ec7874d5bde88c8605671a2b5568eff6 done
+#16 naming to docker.io/library/django_fakestore-modsec_apache done
+#16 DONE 1.1s

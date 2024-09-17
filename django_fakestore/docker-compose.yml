@@ -7,10 +7,8 @@ services:
       dockerfile: Dockerfile
     env_file:
       - .env 
-    ports:
-    - "8001:8001"
-    # expose:
-    #   - 8001
+    expose:
+      - 8001
     depends_on:
       - db
     networks:
@@ -29,18 +27,30 @@ services:
     volumes:
       - fakestore_data:/var/lib/postgresql/data/
   
-  modsec_nginx:
-    container_name: httpserver
+  modsec_apache:
+    container_name: modsec-apache
     build:
-      context: ./modsec_nginx
+      context: ./modsec_apache 
       dockerfile: Dockerfile
     env_file:
-      - .env
+      - .env 
     ports:
-      - "8443"
-    restart: always
-    depends_on: 
-        - db 
+      - "443:443"
+    networks:
+      - fakestore
+
+  # modsec_nginx:
+  #   container_name: httpserver
+  #   build:
+  #     context: ./modsec_nginx
+  #     dockerfile: Dockerfile
+  #   env_file:
+  #     - .env
+  #   ports:
+  #     - "8443"
+  #   restart: always
+  #   depends_on: 
+  #       - db 
 
 
 

@@ -1,5 +1,4 @@
 Django==5.1.1
-django-svelte
 python-dotenv
 djangorestframework
 gunicorn==23.0.0
